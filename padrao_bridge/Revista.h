@@ -7,7 +7,7 @@ using namespace std;
 
 class Revista : public Publicacao {
 private:
-    std::string artigo;
+    string artigo;
 
 public:
     Revista(Implementador* imp) : Publicacao(imp) {}

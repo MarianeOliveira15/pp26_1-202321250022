@@ -27,8 +27,8 @@ public:
     virtual void setAutores(const string& a) = 0;
     virtual void setOutros(const string& o)  = 0;
 
-    virtual std::string getTitulo()      = 0;
-    virtual std::string getAutor(int id) = 0;
+    virtual string getTitulo()      = 0;
+    virtual string getAutor(int id) = 0;
 };
 
 #endif
