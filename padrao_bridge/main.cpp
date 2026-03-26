@@ -1,32 +1,34 @@
-#include<iostream>
-#include<string>
-#include "implementador.hpp"
-#include "publicacao.hpp"
-#include "publicacaoImplBD.hpp"
-#include "PublicacaoImplXML.hpp"
-#include "livro.hpp"
-#include "revista.hpp"
-
-
+#include <iostream>
+#include "Livro.h"
+#include "Revista.h"
+#include "ImplementadorBD.h"
+#include "ImplementadorXML.h"
 using namespace std;
 
+int main() {
 
-int main() {    Implementador* impl = new PublicacaoImplBD();
-    
-    Livro* livro = new Livro(impl);
-    livro->getTitulo();
-    livro->getAutor(1);
-    livro->getISBN();
+    ImplementadorBD bd;
+    Livro livro(&bd);
+    livro.obterDados();
+    cout << "Titulo: " << livro.getTitulo() << endl;
+    cout << "Autor:  " << livro.getAutor(0) << endl;
+    cout << "ISBN:   " << livro.getISBN()   << endl;
 
+    cout <<endl;
 
-    Revista* revista = new Revista(impl);
-    revista->getTitulo();
-    revista->getAutor(2);
-    revista->getArtigo();
+    ImplementadorXML xml;
+    Revista revista(&xml);
+    revista.obterDados();
+    cout << "Titulo:  " << revista.getTitulo()  << endl;
+    cout << "Autor:   " << revista.getAutor(0)  << endl;
+    cout << "Artigo:  " << revista.getArtigo()  << endl;
 
-    delete impl;
-    delete livro;
-    delete revista;
+    cout <<endl;
+
+    Livro livroXML(&xml);
+    livroXML.obterDados();
+
+    cout << endl;
 
     return 0;
 }
