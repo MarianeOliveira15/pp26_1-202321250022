@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug C++",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "D:/GIT/pp26_1-202321250022/pp26_1-202321250022/padrao_bridge/main.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "D:/GIT/pp26_1-202321250022/pp26_1-202321250022/padrao_bridge",
+            "MIMode": "gdb",
+            "miDebuggerPath": "D:/winlibs-x86_64-posix-seh-gcc-15.2.0-mingw-w64msvcrt-13.0.0-r1/mingw64/bin/gdb.exe"
+        }
+    ]
+}
